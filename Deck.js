@@ -2,11 +2,15 @@ var reference = require('./Card');
 var Card = reference.Card;
 
 class Deck {
-    constructor() {
+    constructor(name) {
         this.deck = [];
-        this.reset();
+        this.name = name;
     }
 
+    makeDeck() {
+        this.reset();
+        return this;
+    }
     reset() {
         for (let suit = 0; suit < 4; suit++) {
             for (let value = 1; value <= 13; value++) {
@@ -34,15 +38,19 @@ class Deck {
     }
 
     toString() {
-        let s = 'The current deck:\n';
+        let s = `${this.name}:\n`;
         for (let i = 0; i < this.deck.length; i++) {
             s += this.deck[i].toString() + '\n';
         }
         s += `${this.deck.length} cards total`;
         return s;
     }
+
+    addCardToDeck(card) {
+        if (card instanceof Card) {
+            this.deck.push(card);
+        }
+    }
 }
 
-let deck = new Deck();
-deck.shuffle().shuffle();
-console.log(deck.toString());
+module.exports = { Deck: Deck }

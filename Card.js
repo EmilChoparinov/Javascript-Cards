@@ -43,7 +43,7 @@ class Card {
                 suitVal = 'Spades';
                 break;
             default:
-                throw new Error('not a suit');
+                suitVal = '';
         }
 
         return `${strVal} of ${suitVal}`;
