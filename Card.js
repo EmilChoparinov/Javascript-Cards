@@ -1,4 +1,13 @@
+/**
+ * base class for class Card
+ */
 class Card {
+
+    /**
+     * constructor
+     * @param {Number} value card value from 1 to 13
+     * @param {Number} suit suit value from 0 to 3
+     */
     constructor(value, suit) {
         if (typeof value == 'number' && typeof suit == 'number') {
             if (value >= 1 && value <= 13) this.value = value;
@@ -8,6 +17,9 @@ class Card {
         }
     }
 
+    /**
+     * returns the string representation of the Card class
+     */
     toString() {
         let strVal, suitVal;
         if (this.value >= 2 && this.value <= 10) strVal = this.value;
