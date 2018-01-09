@@ -1,0 +1,22 @@
+{
+  "name": "deck_of_cards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmilChoparinov/Javascript-Cards.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmilChoparinov/Javascript-Cards/issues"
+  },
+  "homepage": "https://github.com/EmilChoparinov/Javascript-Cards#readme",
+  "dependencies": {
+    "rpncc": "^2.0.2"
+  }
+}
